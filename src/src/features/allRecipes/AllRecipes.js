@@ -11,9 +11,9 @@ export const AllRecipes = (props) => {
   
   const { allRecipes, dispatch } = props;
 
-  const onFirstRender = () => {
+  useEffect(() => {
     dispatch(loadData());
-  }
+  }, [dispatch]); 
 
   
   const onAddRecipeHandler = (recipe) => {
